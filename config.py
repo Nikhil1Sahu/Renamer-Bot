@@ -4,24 +4,24 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID = os.environ.get("API_ID", "")
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID = os.environ.get("API_ID", "18466881")
+    API_HASH = os.environ.get("API_HASH", "8c8ca14ad8e416ce4e6ea717db7ec6af")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7342974678:AAEU9FKsi-lmOdJPBNIdKfiI7IuYmyxS9Zg") 
    
     # database config
-    DATABASE_NAME = os.environ.get("DATABASE_NAME","")     
-    DATABASE_URL = os.environ.get("DATABASE_URL","")
+    DATABASE_NAME = os.environ.get("DATABASE_NAME","rename")     
+    DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://nikhilsahu7j:dTQKfvo0jABOYKOu@cluster0.n2csgvi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
     # other configs
     BOT_UPTIME = time.time()
-    START_PIC = (os.environ.get("START_PIC", "https://envs.sh/N2f.jpg https://envs.sh/N2a.jpg https://envs.sh/N2O.jpg")).split()
-    ADMIN = int(os.environ.get("ADMIN", ""))
+    START_PIC = (os.environ.get("START_PIC", "https://envs.sh/dpP.jpg https://envs.sh/dpq.jpg https://envs.sh/dp0.jpg")).split()
+    ADMIN = int(os.environ.get("ADMIN", "5565120414"))
 
     # channels
-    IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" For Enable Force Subscribe
-    AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split())) # Add Multiple Channels iD By Space
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
-    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", ""))
+    IS_FSUB = os.environ.get("IS_FSUB", "True").lower() == "true"  # Set "True" For Enable Force Subscribe
+    AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "-1002807337111").split())) # Add Multiple Channels iD By Space
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002731391701"))
+    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", "-1002269814881"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
