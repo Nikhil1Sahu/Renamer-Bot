@@ -18,7 +18,7 @@ class Config(object):
     ADMIN = int(os.environ.get("ADMIN", "5565120414"))
 
    # channels
-    IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" For Enable Force Subscribe
+    IS_FSUB = os.environ.get("IS_FSUB", "True").lower() == "true"  # Set "True" For Enable Force Subscribe
     AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "-1002807337111").split())) # Replace with numeric ID of @network_of_kingdom
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002731391701"))
     BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", "-1002269814881"))
