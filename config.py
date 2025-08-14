@@ -17,11 +17,16 @@ class Config(object):
     START_PIC = (os.environ.get("START_PIC", "https://envs.sh/dpP.jpg https://envs.sh/dpq.jpg https://envs.sh/dp0.jpg")).split()
     ADMIN = int(os.environ.get("ADMIN", "5565120414"))
 
-    # channels
-    IS_FSUB = os.environ.get("IS_FSUB", "True").lower() == "true"  # Set "True" For Enable Force Subscribe
-    AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "-1002807337111").split())) # Add Multiple Channels iD By Space
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002731391701"))
-    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", "-1002269814881"))
+    # Enable Force Subscribe
+     IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"
+
+    # Main channel users must join (numeric ID of @network_of_kingdom)
+     AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "-1002807337111").split()))
+
+    # Logs and Bin channels (replace with your own if you have them)
+     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002807337111"))
+     BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", "-1002807337111"))
+
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
